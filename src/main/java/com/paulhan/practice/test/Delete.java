@@ -14,6 +14,5 @@ public class Delete {
     @DeleteMapping
     public void deleteTest(HttpServletResponse response) throws IOException{
         System.out.println("delete");
-        response.sendRedirect("/test");
     }
 }

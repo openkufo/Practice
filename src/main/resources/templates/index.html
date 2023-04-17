@@ -15,13 +15,20 @@
         <input type="hidden" name="_method" value="delete">
         <button>DELETE</button>
     </form>
-    
+
     <script>
         const form = document.querySelector('form');
         const btn = document.querySelector('button');
         btn.addEventListener('click', function(){
-            form.submit();
+            $.ajax({
+                method : 'DELETE',
+                url : '/board',
+            }).done(function(result){
+                window.location = '/test'
+            })
         });
     </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </body>
 </html>
